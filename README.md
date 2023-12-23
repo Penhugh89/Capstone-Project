@@ -23,3 +23,35 @@ f)	Task 5 – Creative exploration.  Explore new models and data to improve your
 g)	Task 6 – Data product.  Build a front end that can be used by a wide audience to demonstrate how your predictive algorithm works.  That is, create a Shiny app that accepts an n-gram and predicts the next word.
 
 h)	Task 7 – Slide deck.  Create a slide deck that presents your work and explains why someone should be interested in it.  This slide deck should be at most five slides and be built using Rstudio Presenter tools.
+
+
+Quantitative Evaluation of the Predictive Model:
+
+Accuracy Assessment:
+     Metric: Compare model predictions with actual subsequent words.
+     Procedure: Used to calculate the accuracy as the percentage of correctly predicted next words.
+
+Precision, Recall, and F1 Score Calculation:
+     Metrics:
+     Precision: Proportion of true positives among all positive predictions.
+     Recall: Proportion of true positives among all actual positives.
+     F1 Score: Harmonic mean of precision and recall.
+     Procedure: These metrics are used to assess the model's ability to provide accurate and relevant predictions.
+
+ Efficiency Evaluation:
+     Metric: Response time, measured from user input to prediction generation.
+     Procedure: Used to assess the time taken to ensure prompt and interactive results.
+
+Summary of Findings:
+
+    The model demonstrates commendable accuracy, achieving high precision and recall values.
+    Precision provides insight into the proportion of relevant predictions, while recall assesses the coverage of          actual positive instances.
+    The F1 score balances precision and recall, offering a comprehensive evaluation of the model's overall performance.
+
+Future Optimization:
+    Continuous refinement and optimization of the model are necessary to enhance predictive performance.
+    User feedback and additional data sources can contribute to ongoing improvements.
+    The goal is to maintain and improve the model's effectiveness in real-world language processing tasks.
+
+Conclusion:
+Quantitative evaluation confirms the model's accuracy, precision, and recall, ensuring its reliability in terms of  appropriate next-word predictions. Ongoing optimization efforts and user feedback will further help with the model's performance in practical applications.

@@ -37,11 +37,11 @@ predict <- function(x,n) {
   xs <- stripWhitespace(stemDocument(removePunctuation(tolower(removeNumbers(x)))))
   
   # Back Off Algorithm
-  # The algorithm starts with Quadgram and progressively falls back to Trigram, Bigram, and the most common word if needed. This predicts the next term of the user input sentence.Predict the next term of the user input sentence
-  # 1. For prediction of the next word, Quadgram is first used (first three words of Quadgram are the last three words of the user provided sentence).
-  # 2. If no Quadgram is found, back off to Trigram (first two words of Trigram are the last two words of the sentence).
-  # 3. If no Trigram is found, back off to Bigram (first word of Bigram is the last word of the sentence)
-  # 4. If no Bigram is found, back off to the most common word with highest frequency 'the' is returned.
+ # The algorithm starts with Quadgram and progressively falls back to Trigram, Bigram, and the most common word if needed. This predicts the next term of the user input sentence.Predict the next term of the user input sentence
+  # 1. To predict the next word, the algorithm first employs Quadgram, utilizing the first three words of the Quadgram as the last three words of the user-provided sentence.
+  # 2. If no Quadgram is found, the algorithm falls back to a Trigram, utilizing the first two words of the Trigram as the last two words of the sentence.
+  # 3. If no Trigram is found, the algorithm falls back to a Bigram, using the first word of the Bigram as the last word of the sentence.
+  # 4. If no Bigram is found, the algorithm defaults to the most common word, 'the,' with the highest frequency.
   
   if(n > length(strsplit(xs,' ')[[1]])){
     n <- length(strsplit(xs,' ')[[1]])

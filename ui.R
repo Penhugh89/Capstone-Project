@@ -1,43 +1,26 @@
-
-#Load the shiny library
-library(shiny)
-
-# Define User Interface (UI) for the Shiny application
-# 'fluidPage': Creates a fluid page layout, which adjusts its size dynamically based on the user's screen.
-shinyUI(fluidPage(
-  
-# Application title
+ui <- fluidPage(
   titlePanel("Next Word Prediction"),
-  h6("it may take several seconds"),
+  h6("It may take several seconds"),
   
-  # Sidebar with a slider input for selecting the value of N (for N-gram models).  
   sidebarLayout(
     sidebarPanel(
-      
-      sliderInput(
-        inputId =  "Ngram", 
-        label = "Select N for Ngram:", 
-        min = 1,
-        max = 20,
-        value = 3,
-        step = 1
-      ),
-      textInput("inputString", "Enter a partial sentence here",value = "I love you"),
+      sliderInput("Ngram", label = "Select N for Ngram:", min = 1, max = 20, value = 3, step = 1),
+      textInput("inputString", "Enter a partial sentence here", value = "I love"),
       submitButton("Submit", icon("refresh"))
-      
     ),
     mainPanel(
       h2("Predicted Next Word"),
       strong("Sentence Input:"),
-      tags$style(type='text/css', '#text1 {background-color: rgba(255,255,0,0.40); color: blue;}'), 
+      tags$style(type = 'text/css', '#text1 {background-color: rgba(255,255,0,0.40); color: blue;}'),
       textOutput('text1'),
       br(),
       strong("Sentences with Next Word Candidates:"),
       textOutput("prediction"),
       br(),
       strong("Note:"),
-      tags$style(type='text/css', '#text2 {background-color: rgba(255,255,0,0.40); color: black;}'),
+      tags$style(type = 'text/css', '#text2 {background-color: rgba(255,255,0,0.40); color: black;}'),
       textOutput('text2')
     )
   )
-))
+)
+
